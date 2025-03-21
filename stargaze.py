@@ -74,7 +74,7 @@ def night_sky_visibility(cloudiness, humidity, visibility):
     return max(0, min(100, math.floor(score)))
 
 def get_weather_data():
-    apiKey = "cae490f3458d443a67748469397a435e"
+    apiKey = os.getenv("WEATHER_KEY")
     url = "https://api.openweathermap.org/data/2.5/weather?lat=" + LAT + "&lon=" + LNG + "&appid=" + apiKey
     res = json.loads(requests.get(url).text)
     return res["clouds"]["all"], res["main"]["humidity"], res["visibility"]
