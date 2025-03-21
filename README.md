@@ -1,4 +1,4 @@
-# Night Sky Visibility Display
+# Night Sky Visibility Display for Telescopes
 
 This script is designed to run on a Raspberry Pi and display night sky visibility information on an I²C-connected LCD. It retrieves current celestial body positions from AstronomyAPI and weather data from OpenWeatherMap, calculates a “night sky visibility” score, and then displays the score along with a list of visible celestial bodies in a specified azimuth range.
 
@@ -14,7 +14,7 @@ This script is designed to run on a Raspberry Pi and display night sky visibilit
 
 ### Hardware:
 - Raspberry Pi with network connectivity.
-- An I²C LCD display compatible with the `liquidcrystal_i2c` library.
+- An I²C LCD display compatible with the `liquidcrystal_i2c` library. https://www.amazon.com/gp/product/B07QLRD3TM/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1
 
 ### APIs:
 - AstronomyAPI account and API key. https://astronomyapi.com/
@@ -39,10 +39,17 @@ This script is designed to run on a Raspberry Pi and display night sky visibilit
    ```bash
    pip install requests python-dotenv liquidcrystal_i2c
 
+   Or download i2c package with git clone https://github.com/pl31/python-liquidcrystal_i2c.git
+
 Configure Environment Variables:
 Create a .env file in the same directory as the script with the following content:
 
 KEY=your_astronomy_api_key
+
 WEATHER_KEY=your_openweathermap_key
+
 LAT=your_latitude
+
 LNG=your_longitude
+
+You can now execute your script. I chose to run the script automatically when I turn on the power for the RasPi. 
