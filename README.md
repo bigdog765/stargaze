@@ -17,8 +17,8 @@ This script is designed to run on a Raspberry Pi and display night sky visibilit
 - An I²C LCD display compatible with the `liquidcrystal_i2c` library.
 
 ### APIs:
-- AstronomyAPI account and API key.
-- OpenWeatherMap API key (the script currently includes a sample key which you might need to replace).
+- AstronomyAPI account and API key. https://astronomyapi.com/
+- OpenWeatherMap API key. https://openweathermap.org/api
 
 ### Software:
 - Python 3.x
@@ -43,5 +43,6 @@ Configure Environment Variables:
 Create a .env file in the same directory as the script with the following content:
 
 KEY=your_astronomy_api_key
+WEATHER_KEY=your_openweathermap_key
 LAT=your_latitude
 LNG=your_longitude
