@@ -41,7 +41,7 @@ This script is designed to run on a Raspberry Pi and display night sky visibilit
 
    Or download i2c package with git clone https://github.com/pl31/python-liquidcrystal_i2c.git
 
-Configure Environment Variables:
+## Configure Environment Variables:
 Create a .env file in the same directory as the script with the following content:
 
 KEY=your_astronomy_api_key
@@ -52,4 +52,15 @@ LAT=your_latitude
 
 LNG=your_longitude
 
+
+## Configuration
+
+Elevation and Azimuth Range:
+
+ELEV is set to "310" (meters). Update this value if your elevation differs.
+
+AZIMUTH_RANGE is defined as (130, 340) to focus on most of the western sky. Adjust this tuple to change based on where you want to look in the sky.
+
+
 You can now execute your script. I chose to run the script automatically when I turn on the power for the RasPi. 
+
